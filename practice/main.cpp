@@ -1,14 +1,8 @@
 #include "Header.h"
 
-int main()
+int main(void)
 {
-	cout << "Hello " << endl;
-
-	cout << "Hello2 " << endl;
-
-	cout << "Hello3 " << endl;
-
-	cout << "Hello4 " << endl;
-
+	Book web_book = { "HTML°ú CSS", "È«±æµ¿", 28000 };
+	Display(web_book);
 	return 0;
 }
