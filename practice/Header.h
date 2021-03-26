@@ -3,16 +3,18 @@
 
 using namespace std;
 
-struct Book
-
+class Book
 {
+	int current_page_;
+	void set_percent();
+public:
+	Book(const string& title, int total_page);
 
-    string title;
+	string title_;
+	int total_page_;
+	double percent_;
 
-    string author;
-
-    int price;
-
+	void Move(int page);
+	void Open();
+	const Book& ThickerBook(const Book&);
 };
-
-void Display(const Book&);
