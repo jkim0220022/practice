@@ -1,8 +1,30 @@
 #include "Header.h"
 
-void Display(const Book& bk)
+Rect::Rect(double height, double width)
 {
-	cout << "책의 제목은 " << bk.title << "이고, ";
-	cout << "저자는 " << bk.author << "이며, ";
-	cout << "가격은 " << bk.price << "원입니다.";
+	height_ = height;
+	width_ = width;
+}
+
+void Rect::height() const
+{
+	cout << "this rect's height : " << this->height_ << endl;
+}
+
+void Rect::width() const
+{
+	cout << "this rect's width : " << this->height_ << endl;
+}
+
+void Display::ShowSize(const Rect& target)
+{
+	target.height();
+	target.width();
+}
+void Display::ShowDiagonal(const Rect& target)
+{
+	double diagonal;
+	diagonal = sqrt(pow(target.height_, 2) + pow(target.width_, 2));
+
+	cout << "this rect's diagonal : " << diagonal << endl;
 }

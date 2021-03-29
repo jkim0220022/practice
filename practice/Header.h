@@ -3,16 +3,23 @@
 
 using namespace std;
 
-struct Book
+class Rect;
 
+class Display
 {
-
-    string title;
-
-    string author;
-
-    int price;
-
+public:
+	void ShowSize(const Rect& target);
+	void ShowDiagonal(const Rect& target);
 };
 
-void Display(const Book&);
+class Rect
+{
+	double height_;
+	double width_;
+
+public:
+	Rect(double height, double width);
+	void height() const;
+	void width() const;
+	friend void Display::ShowDiagonal(const Rect& target);
+};

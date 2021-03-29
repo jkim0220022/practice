@@ -1,8 +1,12 @@
 #include "Header.h"
 
-int main(void)
+int main()
 {
-	Book web_book = { "HTML°ú CSS", "È«±æµ¿", 28000 };
-	Display(web_book);
+	Rect rect01(10, 20);
+
+	Display rect_display;
+	rect_display.ShowSize(rect01);
+	rect_display.ShowDiagonal(rect01);
+
 	return 0;
 }
