@@ -5,6 +5,8 @@
 #include <map>
 #include <algorithm>
 #include <time.h>
+#include <functional>
+#include <stdio.h>
 
 using namespace std;
 
